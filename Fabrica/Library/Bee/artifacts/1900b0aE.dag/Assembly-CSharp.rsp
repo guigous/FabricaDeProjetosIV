@@ -366,6 +366,9 @@
 "Assets/Scripts/First person controller/Components/Zoom.cs"
 "Assets/Scripts/First person controller/FirstPersonLook.cs"
 "Assets/Scripts/First person controller/FirstPersonMovement.cs"
+"Assets/Scripts/Parasite.cs"
+"Assets/Scripts/Patrol.cs"
+"Assets/Scripts/Point.cs"
 "Assets/Scripts/Segurarobj.cs"
 -langversion:9.0
 

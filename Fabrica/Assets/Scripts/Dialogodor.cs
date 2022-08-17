@@ -11,7 +11,7 @@ public class Dialogodor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(ControlDialogo.singleton.TeclaInicioDialogo))
+            if (Input.GetKeyDown(ControlDialogo.singleton.configura.TeclaInicioDialogo))
             {
                 StartCoroutine(ControlDialogo.singleton.conversar(estados[estadoActual].frases));
             }

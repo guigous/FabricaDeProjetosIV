@@ -7,12 +7,11 @@ using TMPro;
 public class ControlDialogo : MonoBehaviour
 {
     public static ControlDialogo singleton;
+    public static bool enDialogo = false;
+
     public GameObject dialogo;
     public TMP_Text txtdialogo;
     [Header("Config de teclado")]
-
-    public KeyCode TeclaSeguinteFrase;
-    public KeyCode TeclaInicioDialogo = KeyCode.F;
     [Header("Ensyaos")]
 
     public ConfigDialogos configura;
@@ -39,9 +38,10 @@ public class ControlDialogo : MonoBehaviour
     public IEnumerator conversar(Frase[] _dialogo)
     {
         dialogo.SetActive(true);
+        enDialogo = true;
         for (int i = 0; i < _dialogo.Length; i++)
         {
-            txtdialogo.text = "";
+            txtdialogo.text = ""; 
             for (int j = 0; j < _dialogo[i].texto.Length + 1; j++)
             {
                 if (Input.GetKey(configura.teclaSkip))
@@ -53,8 +53,10 @@ public class ControlDialogo : MonoBehaviour
             }
             txtdialogo.text = _dialogo[i].texto;
             yield return new WaitForSeconds(0.5f);
-            yield return new WaitUntil(() => Input.GetKeyDown(TeclaSeguinteFrase));
+            yield return new WaitUntil(() => Input.GetKeyDown(configura.TeclaSeguinteFrase));
         }
+        dialogo.SetActive(false);
+        enDialogo = false;
     }
     [ContextMenu("Ativar")]
 

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempoLetra: 0.5
   teclaSkip: 32
+  TeclaSeguinteFrase: 32
+  TeclaInicioDialogo: 102

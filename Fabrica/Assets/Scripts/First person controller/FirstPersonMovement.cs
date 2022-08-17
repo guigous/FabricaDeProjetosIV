@@ -12,4 +12,10 @@ public class FirstPersonMovement : MonoBehaviour
         velocity.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         transform.Translate(velocity.x, 0, velocity.y);
     }
+    
+    protected virtual void Update()
+    {
+        if (ControlDialogo.enDialogo)
+            return;
+    }
 }

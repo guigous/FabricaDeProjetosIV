@@ -7,6 +7,7 @@ TagManager:
   - "Jo\xE3o"
   - DEUS
   - Point
+  - Enemy
   layers:
   - Default
   - TransparentFX

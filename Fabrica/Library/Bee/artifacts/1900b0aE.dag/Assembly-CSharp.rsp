@@ -358,6 +358,7 @@
 "Assets/BICHINHOS TEMPORARIO/Scripts/AI/EnemyAi.cs"
 "Assets/BICHINHOS TEMPORARIO/Scripts/AI/Face.cs"
 "Assets/BICHINHOS TEMPORARIO/Scripts/GameManager.cs"
+"Assets/CENARIO/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
 "Assets/Scripts/ConfigDialogos.cs"
 "Assets/Scripts/ControlDialogo.cs"
 "Assets/Scripts/Dialogodor.cs"

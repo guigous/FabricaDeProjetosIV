@@ -31,7 +31,6 @@ public class Ciclo : MonoBehaviour
         }
 
         ProcessarCeu();
-        CalcularHorario();
     }
 
     private void ProcessarCeu()
@@ -40,8 +39,4 @@ public class Ciclo : MonoBehaviour
         luzDirecional.rotation = Quaternion.Euler(rotacaoX, 0, 0);
     }
 
-    private void CalcularHorario()
-    {
-        horarioText.text = TimeSpan.FromSeconds(segundos).ToString(@"hh\:mm");
-    }
 }

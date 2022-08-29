@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171d3c43470cbb944b75742455424038, type: 3}
   m_Name: Dialogos
   m_EditorClassIdentifier: 
-  tempoLetra: 0.5
+  tempoLetra: 0.4
   teclaSkip: 32
   TeclaSeguinteFrase: 32
   TeclaInicioDialogo: 102

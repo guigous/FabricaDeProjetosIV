@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Dialogodor : MonoBehaviour
 {
     public int estadoActual = 0;
     public EstadoDialogo[] estados;
+    Animator animator;
+    NavMeshAgent agent;
 
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+
+    }
     public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))

@@ -15167,9 +15167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6e71325bec81341a277e8b82b674f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1065698010}
   dialogo: {fileID: 1756548746}
   txtdialogo: {fileID: 1883230077}
+  animator: {fileID: 1065698010}
   configura: {fileID: 11400000, guid: ffc2e86374dcb064bbaa81c38c055856, type: 2}
   Dialogoensa: []
 --- !u!1 &1332099494 stripped
@@ -20561,7 +20561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.33314872}
-  m_AnchoredPosition: {x: -1.3634033, y: 2.693634}
+  m_AnchoredPosition: {x: -1.3634033, y: 2.6936188}
   m_SizeDelta: {x: -29.9999, y: -21.8838}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756548748

@@ -9,13 +9,14 @@ public class ControlDialogo : MonoBehaviour
 {
     public static ControlDialogo singleton;
     public static bool enDialogo = false;
-    public Animator animator;
-    NavMeshAgent agent;
+
 
     public GameObject dialogo;
     public TMP_Text txtdialogo;
     [Header("Config de teclado")]
     [Header("Ensyaos")]
+    public Animator animator;
+    NavMeshAgent agent;
 
     public ConfigDialogos configura;
 
@@ -36,9 +37,9 @@ public class ControlDialogo : MonoBehaviour
     private void Start()
     {
         dialogo.SetActive(false);
+
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-
     }
 
     public IEnumerator conversar(Frase[] _dialogo)

@@ -8,6 +8,8 @@ TagManager:
   - DEUS
   - Point
   - Enemy
+  - playerz
+  - Playerz
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Water
   - UI
   - ignorephys
-  - 
+  - Humanoid
   - 
   - 
   - 

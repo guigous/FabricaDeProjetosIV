@@ -1,0 +1,19 @@
+diff a/Fabrica/Assets/Oldman/Anim/Oldman.controller b/Fabrica/Assets/Oldman/Anim/Oldman.controller	(rejected hunks)
+@@ -64,13 +64,13 @@
+     m_DefaultFloat: 0
+     m_DefaultInt: 0
+     m_DefaultBool: 0
+-    m_Controller: {fileID: 9100000}
+-  - m_Name: Speak
++    m_Controller: {fileID: 0}
++  - m_Name: Falar
+     m_Type: 4
+     m_DefaultFloat: 0
+     m_DefaultInt: 0
+-    m_DefaultBool: 1
+-    m_Controller: {fileID: 9100000}
++    m_DefaultBool: 0
++    m_Controller: {fileID: 0}
+   m_AnimatorLayers:
+   - serializedVersion: 5
+     m_Name: Base Layer

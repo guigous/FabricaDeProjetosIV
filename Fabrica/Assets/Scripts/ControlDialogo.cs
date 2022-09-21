@@ -15,8 +15,6 @@ public class ControlDialogo : MonoBehaviour
     public TMP_Text txtdialogo;
     [Header("Config de teclado")]
     [Header("Ensyaos")]
-    public Animator animator;
-    NavMeshAgent agent;
 
     public ConfigDialogos configura;
 
@@ -38,14 +36,11 @@ public class ControlDialogo : MonoBehaviour
     {
         dialogo.SetActive(false);
 
-        animator = GetComponent<Animator>();
-        agent = GetComponent<NavMeshAgent>();
     }
 
     public IEnumerator conversar(Frase[] _dialogo)
     {
         dialogo.SetActive(true);
-        animator.SetBool("Falar", true);
         enDialogo = true;
         for (int i = 0; i < _dialogo.Length; i++)
         {
@@ -64,7 +59,6 @@ public class ControlDialogo : MonoBehaviour
             yield return new WaitUntil(() => Input.GetKeyDown(configura.TeclaSeguinteFrase));
         }
         dialogo.SetActive(false);
-        animator.SetBool("Falar", false);
         enDialogo = false;
     }
     [ContextMenu("Ativar")]

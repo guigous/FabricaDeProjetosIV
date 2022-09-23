@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - playerz
   - Playerz
+  - Parede
   layers:
   - Default
   - TransparentFX

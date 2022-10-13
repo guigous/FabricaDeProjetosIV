@@ -531,12 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54618f28ab5ffac4e990224e380ee916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 1734521233}
-  - {fileID: 1460457097}
-  - {fileID: 742592219}
-  - {fileID: 1936477561}
-  - {fileID: 889236438}
+  pointsAr: []
 --- !u!54 &698486630
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -567,7 +562,7 @@ GameObject:
   - component: {fileID: 742592216}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -739,7 +734,7 @@ GameObject:
   - component: {fileID: 889236435}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1027,7 +1022,7 @@ GameObject:
   - component: {fileID: 1460457094}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1276,7 +1271,7 @@ GameObject:
   - component: {fileID: 1734521230}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1373,7 +1368,7 @@ GameObject:
   - component: {fileID: 1936477558}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

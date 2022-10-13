@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Patrol : MonoBehaviour
 {
-    public List<GameObject> pointsLst = new List<GameObject>();
+    public GameObject[] pointsAr;
     private int destPoint;
     private NavMeshAgent agent;
 
@@ -15,7 +15,7 @@ public class Patrol : MonoBehaviour
         agent=GetComponent<NavMeshAgent>();
         agent.autoBraking = false;
         GotoNextPoint();
-        AddPointstoList();
+        pointsAr = GameObject.FindGameObjectsWithTag("Point");
     }
 
     // Update is called once per frame
@@ -32,22 +32,15 @@ public class Patrol : MonoBehaviour
     void GotoNextPoint()
     {
         // Returns if no points have been set up
-        if (pointsLst.Count == 0)
+        if (pointsAr.Length == 0)
             return;
 
         // Set the agent to go to the currently selected destination.
-        agent.destination = pointsLst[destPoint].transform.position;
+        agent.destination = pointsAr[destPoint].transform.position;
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
-        destPoint = (destPoint + 1) % pointsLst.Count;
+        destPoint = (destPoint + 1) % pointsAr.Length;
     }
-    void AddPointstoList()
-    {
-        for (int i = 0; i < pointsLst.Count; i++)
-        {
-            pointsLst.Add(GameObject.FindGameObjectWithTag("Point"));
-        }
     
-    }
 }

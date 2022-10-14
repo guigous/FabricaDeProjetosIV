@@ -132,7 +132,7 @@ public class PlayerCharacterController : MonoBehaviour {
         characterVelocityY = 0f;
     }
 
-    private void HandleHookshotStart() {
+    public void HandleHookshotStart() {
         if (TestInputDownHookshot()) {
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit raycastHit)) {
                 // Hit something
@@ -142,6 +142,7 @@ public class PlayerCharacterController : MonoBehaviour {
                 hookshotTransform.gameObject.SetActive(true);
                 hookshotTransform.localScale = Vector3.zero;
                 state = State.HookshotThrown;
+                Debug.Log("Hit");
             }
         }
     }
@@ -172,6 +173,15 @@ public class PlayerCharacterController : MonoBehaviour {
 
         // Move Character Controller
         characterController.Move(hookshotDir * hookshotSpeed * hookshotSpeedMultiplier * Time.deltaTime);
+
+        //Move Object Towards The Player
+        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit raycastHit))
+        {
+            if(raycastHit.collider == gameObject.CompareTag("Flying"))
+            {
+                Debug.Log("HIT");
+            }
+        }
 
         float reachedHookshotPositionDistance = 1f;
         if (Vector3.Distance(transform.position, hookshotPosition) < reachedHookshotPositionDistance) {

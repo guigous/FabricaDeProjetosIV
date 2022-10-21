@@ -16,9 +16,6 @@ using UnityEngine;
 
 public class PlayerCharacterController : MonoBehaviour {
 
-    private const float NORMAL_FOV = 60f;
-    private const float HOOKSHOT_FOV = 100f;
-
     [SerializeField] private float mouseSensitivity = 1f;
     [SerializeField] private Transform debugHitPointTransform;
     [SerializeField] private Transform hookshotTransform;
@@ -28,8 +25,6 @@ public class PlayerCharacterController : MonoBehaviour {
     private float characterVelocityY;
     private Vector3 characterVelocityMomentum;
     private Camera playerCamera;
-    private CameraFov cameraFov;
-    private ParticleSystem speedLinesParticleSystem;
     private State state;
     private Vector3 hookshotPosition;
     private float hookshotSize;
@@ -37,14 +32,12 @@ public class PlayerCharacterController : MonoBehaviour {
     private enum State {
         Normal,
         HookshotThrown,
-        HookshotFlyingPlayer,
+        HookshotDragObject,
     }
 
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         playerCamera = transform.Find("Camera").GetComponent<Camera>();
-        cameraFov = playerCamera.GetComponent<CameraFov>();
-        //speedLinesParticleSystem = transform.Find("Camera").Find("SpeedLinesParticleSystem").GetComponent<ParticleSystem>();
         Cursor.lockState = CursorLockMode.Locked;
         state = State.Normal;
         hookshotTransform.gameObject.SetActive(false);
@@ -63,7 +56,7 @@ public class PlayerCharacterController : MonoBehaviour {
             HandleCharacterLook();
             HandleCharacterMovement();
             break;
-        case State.HookshotFlyingPlayer:
+        case State.HookshotDragObject:
             HandleCharacterLook();
             HandleHookshotMovement();
             break;
@@ -134,7 +127,8 @@ public class PlayerCharacterController : MonoBehaviour {
 
     public void HandleHookshotStart() {
         if (TestInputDownHookshot()) {
-            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit raycastHit)) {
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit raycastHit)) 
+            {
                 // Hit something
                 debugHitPointTransform.position = raycastHit.point;
                 hookshotPosition = raycastHit.point;
@@ -142,8 +136,9 @@ public class PlayerCharacterController : MonoBehaviour {
                 hookshotTransform.gameObject.SetActive(true);
                 hookshotTransform.localScale = Vector3.zero;
                 state = State.HookshotThrown;
-                Debug.Log("Hit");
+                Debug.Log("HIT");
             }
+            
         }
     }
 
@@ -155,13 +150,23 @@ public class PlayerCharacterController : MonoBehaviour {
         hookshotTransform.localScale = new Vector3(1, 1, hookshotSize);
 
         if (hookshotSize >= Vector3.Distance(transform.position, hookshotPosition)) {
-            state = State.HookshotFlyingPlayer;
-            //cameraFov.SetCameraFov(HOOKSHOT_FOV);
-            //speedLinesParticleSystem.Play();
+            state = State.HookshotDragObject;
+           
         }
     }
 
-    private void HandleHookshotMovement() {
+    public void HandleHookshotDragObject()
+    {
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit raycastHit))
+        {
+            
+        }
+    }
+
+
+    private void HandleHookshotMovement() 
+    {
+        
         hookshotTransform.LookAt(hookshotPosition);
 
         Vector3 hookshotDir = (hookshotPosition - transform.position).normalized;
@@ -172,16 +177,7 @@ public class PlayerCharacterController : MonoBehaviour {
         float hookshotSpeedMultiplier = 5f;
 
         // Move Character Controller
-        characterController.Move(hookshotDir * hookshotSpeed * hookshotSpeedMultiplier * Time.deltaTime);
-
-        //Move Object Towards The Player
-        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit raycastHit))
-        {
-            if(raycastHit.collider == gameObject.CompareTag("Flying"))
-            {
-                Debug.Log("HIT");
-            }
-        }
+        //characterController.Move(hookshotDir * hookshotSpeed * hookshotSpeedMultiplier * Time.deltaTime);
 
         float reachedHookshotPositionDistance = 1f;
         if (Vector3.Distance(transform.position, hookshotPosition) < reachedHookshotPositionDistance) {
@@ -194,22 +190,13 @@ public class PlayerCharacterController : MonoBehaviour {
             StopHookshot();
         }
 
-        if (TestInputJump()) {
-            // Cancelled with Jump
-            float momentumExtraSpeed = 7f;
-            characterVelocityMomentum = hookshotDir * hookshotSpeed * momentumExtraSpeed;
-            float jumpSpeed = 40f;
-            characterVelocityMomentum += Vector3.up * jumpSpeed;
-            StopHookshot();
-        }
     }
 
     private void StopHookshot() {
         state = State.Normal;
         ResetGravityEffect();
         hookshotTransform.gameObject.SetActive(false);
-        //cameraFov.SetCameraFov(NORMAL_FOV);
-        //speedLinesParticleSystem.Stop();
+
     }
 
     private bool TestInputDownHookshot() {

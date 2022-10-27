@@ -10,7 +10,7 @@ public class Segurarobj : MonoBehaviour
     public float DistanciaMax;
     public bool Segurando;
     public GameObject Local;
-    public LayerMask Layoso;
+    public LayerMask Layer;
 
 
     void Start()
@@ -35,7 +35,7 @@ public class Segurarobj : MonoBehaviour
         if (Segurando == false)
         {
             RaycastHit hit = new RaycastHit();
-            if (Physics.Raycast(transform.position, transform.forward, out hit, DistanciaMax, Layoso, QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, DistanciaMax, Layer, QueryTriggerInteraction.Ignore))
             {
                 Debug.DrawLine(transform.position, hit.point, Color.green);
 

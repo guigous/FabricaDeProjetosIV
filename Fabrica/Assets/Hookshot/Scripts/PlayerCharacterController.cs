@@ -174,7 +174,7 @@ public class PlayerCharacterController : MonoBehaviour {
         float hookshotSpeedMin = 10f;
         float hookshotSpeedMax = 40f;
         float hookshotSpeed = Mathf.Clamp(Vector3.Distance(transform.position, hookshotPosition), hookshotSpeedMin, hookshotSpeedMax);
-        float hookshotSpeedMultiplier = 5f;
+        //float hookshotSpeedMultiplier = 5f;
 
         // Move Character Controller
         //characterController.Move(hookshotDir * hookshotSpeed * hookshotSpeedMultiplier * Time.deltaTime);

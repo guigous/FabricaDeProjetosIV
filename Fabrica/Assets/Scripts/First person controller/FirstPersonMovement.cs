@@ -7,6 +7,7 @@ public class FirstPersonMovement : MonoBehaviour
     
 
 
+
     void FixedUpdate()
     {
         velocity.y = Input.GetAxis("Vertical") * speed * Time.deltaTime;

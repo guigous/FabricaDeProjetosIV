@@ -6,7 +6,7 @@ public class HookShot : MonoBehaviour
 {
     public LayerMask layerMask;
     public Camera cam;
-    
+    public Transform hook;
 
 
 
@@ -41,7 +41,7 @@ public class HookShot : MonoBehaviour
         {
             rbhit = raycastHit.transform.GetComponent<Rigidbody>();
 
-            rbhit.velocity = Vector3.MoveTowards(rbhit.position, cam.transform.position, 50f);
+            rbhit.position = Vector3.MoveTowards(rbhit.position, hook.transform.position, 5f);
         }
     }
 }

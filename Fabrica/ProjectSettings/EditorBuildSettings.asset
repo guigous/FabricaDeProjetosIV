@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/CENAS/Menu.unity
+    guid: 2288436938c5071478fe95561b4c3d76
+  - enabled: 1
+    path: Assets/CENAS/JOGO.unity
+    guid: d2809ab9b90eea7419d8d90d4c505d35
   m_configObjects: {}

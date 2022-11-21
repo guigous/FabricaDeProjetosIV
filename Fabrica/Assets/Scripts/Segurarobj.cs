@@ -27,6 +27,7 @@ public class Segurarobj : MonoBehaviour
                 objsegurando.transform.parent = null;
                 objsegurando.GetComponent<Rigidbody>().isKinematic = false;
                 objsegurando = null;
+                Debug.Log("Agarra");
                 return;
 
             }

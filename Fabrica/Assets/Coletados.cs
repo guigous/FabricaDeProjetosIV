@@ -23,7 +23,7 @@ public class Coletados : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("João"))
+        if (other.gameObject.CompareTag("Enemy")&& other.attachedRigidbody.isKinematic==false)
         {
             AddPoints();
             

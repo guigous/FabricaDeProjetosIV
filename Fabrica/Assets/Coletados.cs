@@ -11,7 +11,6 @@ public class Coletados : MonoBehaviour
     private int sludgies_coletatos = 0;
 
     public TextMeshProUGUI ScoreTXT;
-    
 
 
 
@@ -27,7 +26,6 @@ public class Coletados : MonoBehaviour
         if (other.gameObject.CompareTag("João"))
         {
             AddPoints();
-            Debug.Log(other.gameObject.name);
             
         }
         
@@ -37,7 +35,7 @@ public class Coletados : MonoBehaviour
     {
         sludgies_coletatos++;
         ScoreTXT.text = sludgies_coletatos.ToString();
-        
+        Debug.Log("ADDPOINTS");
     }
-    
+
 }

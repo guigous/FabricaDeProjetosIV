@@ -17,13 +17,13 @@ public class SlimeJump : MonoBehaviour
 
     IEnumerator startTime()
     {
-        
-        //Debug.Log("Start wait");
-        yield return new WaitForSeconds(timeBetweenWait);
-        //Debug.Log("End wait");
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(getRandomValue(), jumpForce, getRandomValue());
-        StartCoroutine(startTime());
+        if (this.enabled)
+        {
+            yield return new WaitForSeconds(timeBetweenWait);
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.velocity = new Vector3(getRandomValue(), jumpForce, getRandomValue());
+            StartCoroutine(startTime());
+        }
     }
     float getRandomValue()
     {

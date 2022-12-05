@@ -1,21 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Final : MonoBehaviour
 {
 
-    public Scene cena;
-
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Door"))
-        {
-            SceneManager.LoadScene("Final");
-        }
+        SceneManager.LoadScene("Final");
     }
- 
-
 }
 
 

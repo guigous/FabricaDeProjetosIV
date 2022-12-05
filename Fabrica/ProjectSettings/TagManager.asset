@@ -12,6 +12,7 @@ TagManager:
   - Playerz
   - Parede
   - Flying
+  - Door
   layers:
   - Default
   - TransparentFX

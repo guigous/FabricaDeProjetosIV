@@ -13,8 +13,6 @@ public class Coletados : MonoBehaviour
 
     public TextMeshProUGUI ScoreTXT;
 
-    public Scene cena;
-
 
 
     private void OnTriggerEnter(Collider other)

@@ -4,17 +4,17 @@
 # High Concept
 
 
-## Lara's Ranch;
+## Lara's Ranch
 
 Corra atrás e pegue criaturinhas chamadas sludgies em um rancho, num lugar remoto encontrado em um planeta distante.;
 
-## Gênero;
+## Gênero
 Casual,Primeira Pessoa;
 
-## Controles;
+## Controles
 Andar, Agarrar, Correr, Soltar.;
 
-## História;
+## História
 Lara herda um rancho de um parente distante e quando viaja para o lugar para assinar a posse, o encontra em um estado recaído com as criaturas espalhadas por todo o lugar e então decide reuní-las para restaurar a paz em seu rancho.;
 
 Lara's Ranch possui personagens únicos e diversidade de criaturas, além de ser acessível e divertido.;

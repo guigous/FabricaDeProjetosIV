@@ -1,20 +1,23 @@
 # FabricaDeProjetosIV
 
 
-#High Concept
+# igh Concept
 
 
-Clayton’s Ranch (Nome Provisório);
+## Lara's Ranch;
 
-Corra atrás e pegue criaturinhas em um rancho em um lugar remoto;
+Corra atrás e pegue criaturinhas chamadas sludgies em um rancho, num lugar remoto encontrado em um planeta distante.;
 
+## Gênero;
 Casual,Primeira Pessoa;
 
-Andar, Agarrar, Correr, Jogar no Cercado;
+## Controles;
+Andar, Agarrar, Correr, Soltar.;
 
-A (Protagonista) herda um rancho de um parente distante e quando viaja para o lugar para assinar a posse, o encontra em um estado recaído com as criaturas espalhadas por todo o lugar e então deve reuni-las;
+## História;
+Lara herda um rancho de um parente distante e quando viaja para o lugar para assinar a posse, o encontra em um estado recaído com as criaturas espalhadas por todo o lugar e então decide reuní-las para restaurar a paz em seu rancho.;
 
-Personagens únicos e diversidade de criaturas, acessível e divertido;
+Lara's Ranch possui personagens únicos e diversidade de criaturas, além de ser acessível e divertido.;
 
 Publicado na Steam e Plataformas de desenvolvimento indie(itch.io, simmer.io e gamejolt);
 
@@ -23,7 +26,7 @@ Classificação indicativa livre e foco de públicos, infantil e adeptos de gên
 Composição de Equipe
 Talita (Programação/Modelagem);
 Julia (Arte);
-Thomas (Level Design);
+Thomas (Level Design/Modelagem);
 Bruno (Sound Design);
 Guilherme (Programação);
 
